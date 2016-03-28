@@ -14,7 +14,8 @@ import com.example.blurtest.util.ImageCache;
 
 public class ImageFilterMainActivity extends Activity {
     ListView mListView;
-    private String[] mListStr = {"1 冰冻", "2 熔铸", "3 连环画", "4 柔化美白", "5 照亮边缘", "6 羽化效果", "7 高斯模糊", "8 倒影效果"};
+    private String[] mListStr = {"1 冰冻", "2 熔铸", "3 连环画", "4 柔化美白", "5 照亮边缘", "6 羽化效果", "7 高斯模糊", "8 倒影效果",
+            "9 底片效果", "10 浮雕效果"};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

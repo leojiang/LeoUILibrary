@@ -84,6 +84,18 @@ public class ImageFilterActivity extends Activity {
                 imageView2.setImageBitmap(tmpBitmap);
                 ImageCache.put("ReflectionFilter", tmpBitmap);
                 break;
+            case 8:
+                if (getImageFromCache("NegativeFilter")) {
+                    break;
+                }
+                doFilterWork("NegativeFilter", new NegativeFilter(mBitmap));
+                break;
+            case 9:
+                if (getImageFromCache("EmbossFilter")) {
+                    break;
+                }
+                doFilterWork("EmbossFilter", new EmbossFilter(mBitmap));
+                break;
             default:
                 imageView2.setImageBitmap(mBitmap);
                 break;
@@ -109,11 +121,6 @@ public class ImageFilterActivity extends Activity {
         imageView1 = (ImageView) findViewById(R.id.imageView1);
         imageView2 = (ImageView) findViewById(R.id.imageView2);
         mBitmap = ImageUtil.readBitMap(mContext, R.drawable.image);
-        imageView2.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-                imageView1.setVisibility(View.GONE);
-            }
-        });
     }
 
     @Override
