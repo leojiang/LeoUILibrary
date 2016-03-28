@@ -1,0 +1,8 @@
+./LeoUILibrary/build
+./LeoUILibrary/gen
+./LeoUILibrary/gradle
+./LeoUILibrary/bin
+./LeoUILibrary/.gradle
+./LeoUILibrary/.idea
+./LeoUILibrary/local.properties
+./LeoUILibrary/LeoUILibrary.iml
