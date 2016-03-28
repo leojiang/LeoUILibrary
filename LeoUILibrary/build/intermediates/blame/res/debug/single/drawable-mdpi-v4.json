@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\workspace\\LeoUILibrary\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "D:\\workspace\\LeoUILibrary\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\workspace\\BlurTest\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "D:\\workspace\\BlurTest\\res\\drawable-mdpi\\ic_launcher.png"
+    }
+]

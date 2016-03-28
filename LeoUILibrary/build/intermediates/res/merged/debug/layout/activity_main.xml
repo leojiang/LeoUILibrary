@@ -1,0 +1,47 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/image_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Image Filter"/>
+
+        <Button
+            android:id="@+id/satellites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Satellite Menu"/>
+
+        <Button
+            android:id="@+id/ClassLoaderTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ClassLoaderTest"/>
+
+        <Button
+            android:id="@+id/gesture_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gesture Test"/>
+
+        <Button
+            android:id="@+id/layout_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Layout Transition"/>
+
+        <Button
+            android:id="@+id/html5_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HTML5 Test"/>
+
+    </LinearLayout>
+</ScrollView>
