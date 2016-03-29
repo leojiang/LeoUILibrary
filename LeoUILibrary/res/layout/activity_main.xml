@@ -18,6 +18,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="ViewPager Animation"/>
+        <Button
+            android:id="@+id/drag_layout_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DragLayout Test"/>
 
         <Button
             android:id="@+id/satellites"

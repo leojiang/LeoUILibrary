@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.example.blurtest.R;
+import com.example.blurtest.draglayouttomenu.DragLayoutActivity;
 
 public class MainActivity extends Activity implements OnClickListener {
 
@@ -21,6 +22,9 @@ public class MainActivity extends Activity implements OnClickListener {
 
         Button btnViewPager = (Button) findViewById(R.id.viewpager_test);
         btnViewPager.setOnClickListener(this);
+
+        Button btnDragLayout = (Button) findViewById(R.id.drag_layout_test);
+        btnDragLayout.setOnClickListener(this);
 
         Button btnSatellites = (Button) findViewById(R.id.satellites);
         btnSatellites.setOnClickListener(this);
@@ -48,6 +52,9 @@ public class MainActivity extends Activity implements OnClickListener {
                 break;
             case R.id.viewpager_test:
                 startActivity(ViewPagerActivity.class);
+                break;
+            case R.id.drag_layout_test:
+                startActivity(DragLayoutActivity.class);
                 break;
             case R.id.satellites:
                 startActivity(SatelliteMenuActivity.class);
