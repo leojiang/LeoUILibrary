@@ -23,7 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.example.blurtest.activity.BlurActivity"/>
         <activity android:name="com.example.blurtest.activity.SatelliteMenuActivity"/>
         <activity android:name="com.example.blurtest.activity.ClassLoaderActivity"/>
         <activity android:name="com.example.blurtest.activity.GestureActivity"/>
@@ -31,6 +30,8 @@
         <activity android:name="com.example.blurtest.activity.Html5Test"/>
         <activity android:name="com.example.blurtest.activity.ImageFilterActivity"/>
         <activity android:name="com.example.blurtest.activity.ImageFilterMainActivity"/>
+        <activity android:name="com.example.blurtest.activity.ViewPagerActivity"/>
+
     </application>
 
 </manifest>

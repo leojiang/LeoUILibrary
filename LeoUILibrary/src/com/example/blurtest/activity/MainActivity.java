@@ -19,6 +19,9 @@ public class MainActivity extends Activity implements OnClickListener {
         Button btnImageFilter = (Button) findViewById(R.id.image_filter);
         btnImageFilter.setOnClickListener(this);
 
+        Button btnViewPager = (Button) findViewById(R.id.viewpager_test);
+        btnViewPager.setOnClickListener(this);
+
         Button btnSatellites = (Button) findViewById(R.id.satellites);
         btnSatellites.setOnClickListener(this);
 
@@ -42,6 +45,9 @@ public class MainActivity extends Activity implements OnClickListener {
         switch (id) {
             case R.id.image_filter:
                 startActivity(ImageFilterMainActivity.class);
+                break;
+            case R.id.viewpager_test:
+                startActivity(ViewPagerActivity.class);
                 break;
             case R.id.satellites:
                 startActivity(SatelliteMenuActivity.class);
