@@ -18,17 +18,15 @@ import com.example.blurtest.R;
 import com.example.blurtest.view.DragLayout;
 import com.example.blurtest.view.DragLayout.DragListener;
 import com.nineoldandroids.view.ViewHelper;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import java.util.Random;
 
 public class DragLayoutActivity extends Activity {
 
-    private DragLayout dl;
-    private GridView gv_img;
+    private DragLayout mDragLayout;
+    private GridView mGridView;
     private ImageAdapter adapter;
-    private ListView lv;
-    private TextView tv_noimg;
-    private ImageView iv_icon, iv_bottom;
+    private ListView settingListView;
+    private TextView textNothing;
+    private ImageView titleIcon, settingIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +39,11 @@ public class DragLayoutActivity extends Activity {
     }
 
     private void initDragLayout() {
-        dl = (DragLayout) findViewById(R.id.dl);
-        dl.setDragListener(new DragListener() {
+        mDragLayout = (DragLayout) findViewById(R.id.dl);
+        mDragLayout.setDragListener(new DragListener() {
             @Override
             public void onOpen() {
-                lv.smoothScrollToPosition(new Random().nextInt(30));
+//                settingListView.smoothScrollToPosition(new Random().nextInt(30));
             }
 
             @Override
@@ -55,41 +53,33 @@ public class DragLayoutActivity extends Activity {
 
             @Override
             public void onDrag(float percent) {
-                ViewHelper.setAlpha(iv_icon, 1 - percent);
+                ViewHelper.setAlpha(titleIcon, 1 - percent);
             }
         });
     }
 
     private void initView() {
-        iv_icon = (ImageView) findViewById(R.id.iv_icon);
-        iv_bottom = (ImageView) findViewById(R.id.iv_bottom);
-        gv_img = (GridView) findViewById(R.id.gv_img);
-        tv_noimg = (TextView) findViewById(R.id.iv_noimg);
-        gv_img.setFastScrollEnabled(true);
+        titleIcon = (ImageView) findViewById(R.id.iv_icon);
+        settingIcon = (ImageView) findViewById(R.id.iv_bottom);
+        mGridView = (GridView) findViewById(R.id.gv_img);
+        textNothing = (TextView) findViewById(R.id.iv_noimg);
+        mGridView.setFastScrollEnabled(true);
         adapter = new ImageAdapter(this);
-        gv_img.setAdapter(adapter);
-        lv = (ListView) findViewById(R.id.lv);
-        lv.setAdapter(new ArrayAdapter<String>(DragLayoutActivity.this,
-                R.layout.item_text, new String[]{"NewBee", "ViCi Gaming",
-                "Evil Geniuses", "Team DK", "Invictus Gaming", "LGD",
-                "Natus Vincere", "Team Empire", "Alliance", "Cloud9",
-                "Titan", "Mousesports", "Fnatic", "Team Liquid",
-                "MVP Phoenix", "NewBee", "ViCi Gaming",
-                "Evil Geniuses", "Team DK", "Invictus Gaming", "LGD",
-                "Natus Vincere", "Team Empire", "Alliance", "Cloud9",
-                "Titan", "Mousesports", "Fnatic", "Team Liquid",
-                "MVP Phoenix"}));
-        lv.setOnItemClickListener(new OnItemClickListener() {
+        mGridView.setAdapter(adapter);
+        settingListView = (ListView) findViewById(R.id.lv);
+        settingListView.setAdapter(new ArrayAdapter<String>(DragLayoutActivity.this,
+                R.layout.draylayout_settting_list_item, new String[]{"My Profile", "My Setting", "Display Effect", "FeecBacks", "About Us"}));
+        settingListView.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1,
                                     int position, long arg3) {
-                Util.t(getApplicationContext(), "click " + position);
+//                Util.toast(getApplicationContext(), "click " + position);
             }
         });
-        iv_icon.setOnClickListener(new OnClickListener() {
+        titleIcon.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                dl.open();
+                mDragLayout.open();
             }
         });
     }
@@ -110,19 +100,18 @@ public class DragLayoutActivity extends Activity {
 
             @Override
             public void onBefore() {
-                // 转菊花
             }
 
             @Override
             public void onAfter(boolean b) {
                 adapter.notifyDataSetChanged();
                 if (b) {
-                    tv_noimg.setVisibility(View.VISIBLE);
+                    textNothing.setVisibility(View.VISIBLE);
                 } else {
-                    tv_noimg.setVisibility(View.GONE);
-                    String s = "file://" + adapter.getItem(0);
-                    ImageLoader.getInstance().displayImage(s, iv_icon);
-                    ImageLoader.getInstance().displayImage(s, iv_bottom);
+                    textNothing.setVisibility(View.GONE);
+//                    String s = "file://" + adapter.getItem(0);
+//                    ImageLoader.getInstance().displayImage(s, titleIcon);
+//                    ImageLoader.getInstance().displayImage(s, settingIcon);
                 }
                 shake();
             }
@@ -131,7 +120,7 @@ public class DragLayoutActivity extends Activity {
     }
 
     private void shake() {
-        iv_icon.startAnimation(AnimationUtils.loadAnimation(this, R.anim.shake));
+        titleIcon.startAnimation(AnimationUtils.loadAnimation(this, R.anim.shake));
     }
 
 }

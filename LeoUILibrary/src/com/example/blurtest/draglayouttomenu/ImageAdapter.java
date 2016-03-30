@@ -43,7 +43,7 @@ public class ImageAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         final ViewHolder holder;
         if (convertView == null) {
-            convertView = infalter.inflate(R.layout.item_image, null);
+            convertView = infalter.inflate(R.layout.draglayout_gridview_item, null);
             holder = new ViewHolder();
             holder.iv_item = (ImageView) convertView.findViewById(R.id.iv_item);
             convertView.setTag(holder);

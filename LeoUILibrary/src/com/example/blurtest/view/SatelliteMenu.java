@@ -133,9 +133,11 @@ public class SatelliteMenu extends ViewGroup {
                 iv.setVisibility(View.VISIBLE);
                 iv.setImageResource(mItemImgs[i]);
             }
-            if (tv != null) {
-                tv.setVisibility(View.VISIBLE);
-                tv.setText(mItemTexts[i]);
+            if (mItemTexts != null) {
+                if (tv != null) {
+                    tv.setVisibility(View.VISIBLE);
+                    tv.setText(mItemTexts[i]);
+                }
             }
 
             view.setOnClickListener(new OnClickListener() {

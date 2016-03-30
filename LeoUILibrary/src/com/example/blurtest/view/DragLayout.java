@@ -164,7 +164,7 @@ public class DragLayout extends FrameLayout {
         super.onSizeChanged(w, h, oldw, oldh);
         width = vg_left.getMeasuredWidth();
         height = vg_left.getMeasuredHeight();
-        range = (int) (width * 0.6f);
+        range = (int) (width * 0.75f);
     }
 
     @Override
@@ -205,8 +205,8 @@ public class DragLayout extends FrameLayout {
 
     private void animateView(float percent) {
         float f1 = 1 - percent * 0.3f;
-        ViewHelper.setScaleX(vg_main, f1);
-        ViewHelper.setScaleY(vg_main, f1);
+//        ViewHelper.setScaleX(vg_main, f1);
+//        ViewHelper.setScaleY(vg_main, f1);
         ViewHelper.setTranslationX(vg_left, -vg_left.getWidth() / 2.3f + vg_left.getWidth() / 2.3f * percent);
         ViewHelper.setScaleX(vg_left, 0.5f + 0.5f * percent);
         ViewHelper.setScaleY(vg_left, 0.5f + 0.5f * percent);
