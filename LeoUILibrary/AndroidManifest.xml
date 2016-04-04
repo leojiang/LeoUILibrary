@@ -33,6 +33,8 @@
         <activity android:name="com.example.blurtest.activity.ImageFilterActivity"/>
         <activity android:name="com.example.blurtest.activity.ImageFilterMainActivity"/>
         <activity android:name="com.example.blurtest.activity.ViewPagerActivity"/>
+        <activity android:name="com.example.blurtest.activity.GifActivity"/>
+
         <activity android:name="com.example.blurtest.draglayouttomenu.DragLayoutActivity"/>
 
     </application>

@@ -20,6 +20,10 @@ public class MainActivity extends Activity implements OnClickListener {
         Button btnImageFilter = (Button) findViewById(R.id.image_filter);
         btnImageFilter.setOnClickListener(this);
 
+        Button btnGifImage = (Button) findViewById(R.id.gif_test);
+        btnGifImage.setOnClickListener(this);
+
+
         Button btnViewPager = (Button) findViewById(R.id.viewpager_test);
         btnViewPager.setOnClickListener(this);
 
@@ -49,6 +53,9 @@ public class MainActivity extends Activity implements OnClickListener {
         switch (id) {
             case R.id.image_filter:
                 startActivity(ImageFilterMainActivity.class);
+                break;
+            case R.id.gif_test:
+                startActivity(GifActivity.class);
                 break;
             case R.id.viewpager_test:
                 startActivity(ViewPagerActivity.class);
