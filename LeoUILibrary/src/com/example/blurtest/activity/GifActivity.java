@@ -5,17 +5,13 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 
 import com.example.blurtest.R;
-import com.example.blurtest.gif.CommonUtil;
 import com.example.blurtest.gif.GifHelper;
 import com.example.blurtest.gif.GifHelper.GifFrame;
 
 import java.io.FileInputStream;
-import java.io.InputStream;
 
 public class GifActivity extends Activity {
 
@@ -28,6 +24,21 @@ public class GifActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gif);
+
+//        OkHttpClient client = new OkHttpClient();
+//        Request request = new Request.Builder()
+//                .url("http://httpbin.org/delay/1") // This URL is served with a 1 second delay.
+//                .build();
+//        Response response = null;
+//        try {
+//            response = client.newCall(request).execute();
+//            response.newBuilder()
+//                    .header("Cache-Control", "max-age=60")
+//                    .build();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
 
 //        iv = new ImageView(this);
 //        iv.setScaleType(ImageView.ScaleType.CENTER);
