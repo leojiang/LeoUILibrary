@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.blurtest.view.PowerImageView
+    <com.example.blurtest.view.GifImageView
         android:id="@+id/image_view"
+        android:background="#846732"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:layout_centerInParent="true"
