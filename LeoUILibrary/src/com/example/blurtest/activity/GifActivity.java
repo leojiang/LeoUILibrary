@@ -27,17 +27,19 @@ public class GifActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        iv = new ImageView(this);
-        iv.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-        setContentView(iv, new ViewGroup.LayoutParams(LayoutParams.FILL_PARENT,
-                LayoutParams.FILL_PARENT));
+        setContentView(R.layout.activity_gif);
 
-        final InputStream fis = getResources().openRawResource(R.raw.anim1);
-
-
-        frames = CommonUtil.getGif(fis);
-        mGifTask = new PlayGifTask(iv, frames);
-        mGifTask.startTask();
+//        iv = new ImageView(this);
+//        iv.setScaleType(ImageView.ScaleType.CENTER);
+//        setContentView(iv, new ViewGroup.LayoutParams(LayoutParams.FILL_PARENT,
+//                LayoutParams.FILL_PARENT));
+//
+//        final InputStream fis = getResources().openRawResource(R.raw.anim1);
+//
+//
+//        frames = CommonUtil.getGif(fis);
+//        mGifTask = new PlayGifTask(iv, frames);
+//        mGifTask.startTask();
 //        Thread th = new Thread(mGifTask);
 //        th.start();
     }
