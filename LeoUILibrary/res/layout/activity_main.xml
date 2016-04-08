@@ -35,17 +35,19 @@
             android:layout_height="wrap_content"
             android:text="Satellite Menu"/>
 
+        <!--
         <Button
             android:id="@+id/ClassLoaderTest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ClassLoaderTest"/>
+            android:text="ClassLoaderTest"/> -->
 
+        <!--
         <Button
             android:id="@+id/gesture_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gesture Test"/>
+            android:text="Gesture Test"/> -->
 
         <Button
             android:id="@+id/layout_test"
@@ -53,11 +55,25 @@
             android:layout_height="wrap_content"
             android:text="Layout Transition"/>
 
+        <!--
         <Button
             android:id="@+id/html5_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="HTML5 Test"/>
+            android:text="HTML5 Test"/> -->
+        <!--
+        <Button
+            android:id="@+id/okhttp_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OK http Test"/> -->
+
+        <Button
+            android:id="@+id/vector_drawable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vector Drawable"/>
+
 
     </LinearLayout>
 </ScrollView>
