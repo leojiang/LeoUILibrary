@@ -16,7 +16,12 @@
         android:strokeWidth="0.5"
         android:strokeColor="#FFFFFF"/>
 
-    <path android:strokeColor="#8d7708"
+    <path android:strokeColor="#C05950"
         android:strokeWidth="0.5"
-        android:pathData="M0,32 c15,20 45,-20 60,0  "/>
+        android:pathData="M0,30 L15,40 L45,20 L60,30  "/>
+
+    <path android:strokeColor="#8d7708"
+          android:strokeWidth="0.5"
+          android:strokeLineCap="square"
+          android:pathData="M0,30 C15,40 45,20 60,30  "/>
 </vector>

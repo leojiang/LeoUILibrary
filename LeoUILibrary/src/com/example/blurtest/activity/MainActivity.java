@@ -87,7 +87,9 @@ public class MainActivity extends Activity implements OnClickListener {
 //            case R.id.okhttp_test:
 //                startActivity(OkhttpActivity.class);
 //                break;
-
+            case R.id.vector_drawable:
+                startActivity(FancySearchBar.class);
+                break;
 
 
             default:
