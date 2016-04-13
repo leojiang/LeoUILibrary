@@ -51,6 +51,11 @@ public class MainActivity extends Activity implements OnClickListener {
         Button vector_drawable = (Button) findViewById(R.id.vector_drawable);
         vector_drawable.setOnClickListener(this);
 
+        Button download_progress = (Button) findViewById(R.id.download_progress);
+        download_progress.setOnClickListener(this);
+
+        Button mediaplayer_test = (Button) findViewById(R.id.mediaplayer_test);
+        mediaplayer_test.setOnClickListener(this);
     }
 
     @Override
@@ -89,6 +94,12 @@ public class MainActivity extends Activity implements OnClickListener {
 //                break;
             case R.id.vector_drawable:
                 startActivity(FancySearchBar.class);
+                break;
+            case R.id.download_progress:
+                startActivity(FancyDownloadProgressBar.class);
+                break;
+            case R.id.mediaplayer_test:
+                startActivity(MediaplayerActivity.class);
                 break;
 
 

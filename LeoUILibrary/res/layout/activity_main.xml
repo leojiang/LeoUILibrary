@@ -73,6 +73,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Vector Drawable"/>
+        <Button
+            android:id="@+id/download_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fancy Download Progress"/>
+        <Button
+            android:id="@+id/mediaplayer_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Media Player Test"/>
 
 
     </LinearLayout>

@@ -4,6 +4,7 @@ package com.example.blurtest.activity;
 
 import android.app.Activity;
 import android.graphics.drawable.AnimatedVectorDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AnimationUtils;
