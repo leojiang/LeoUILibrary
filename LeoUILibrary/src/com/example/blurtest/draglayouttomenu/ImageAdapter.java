@@ -39,6 +39,10 @@ public class ImageAdapter extends BaseAdapter {
         this.paths.addAll(paths);
     }
 
+    public void addItem(String url) {
+        paths.add(url);
+    }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         final ViewHolder holder;

@@ -37,6 +37,7 @@
         <activity android:name="com.example.blurtest.activity.FancySearchBar"/>
         <activity android:name="com.example.blurtest.activity.MediaplayerActivity"/>
         <activity android:name="com.example.blurtest.activity.FancyDownloadProgressBar"/>
+        <activity android:name="com.example.blurtest.activity.GridViewActivity"/>
 
         <activity android:name="com.example.blurtest.activity.OkhttpActivity"/>
         <activity android:name="com.example.blurtest.draglayouttomenu.DragLayoutActivity"/>
