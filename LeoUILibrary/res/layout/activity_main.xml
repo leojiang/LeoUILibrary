@@ -82,7 +82,7 @@
             android:id="@+id/mediaplayer_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Media Player Test"/>
+            android:text="Gift View Test"/>
 
 
     </LinearLayout>

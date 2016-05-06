@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/msg_body_wraper"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:id="@+id/inner_content"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/red_bag_item_background">
+
+            <ImageView
+                android:id="@+id/member_avatar"
+                android:layout_width="33.3dp"
+                android:layout_height="33.3dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3.3dp"
+                android:layout_marginTop="3.3dp"
+                android:background="@drawable/circle_white"
+                android:focusable="false"
+                android:visibility="visible"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6.7dp"
+                android:layout_toRightOf="@+id/member_avatar"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/member_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25.7dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="匿名"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12.7dp"
+                    />
+
+                <TextView
+                    android:id="@+id/member_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/member_avatar"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="msg"
+                    android:textColor="#FC5C6C"
+                    android:textSize="11.3dp"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/gift_img"
+            android:layout_width="51dp"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@+id/inner_content"
+            android:src="@drawable/red_heart_1"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:text="X100"
+        android:textColor="#00FF00"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:typeface="monospace"/>
+</LinearLayout>

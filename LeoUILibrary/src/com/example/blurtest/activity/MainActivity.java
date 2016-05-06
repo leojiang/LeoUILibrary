@@ -99,7 +99,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 startActivity(FancyDownloadProgressBar.class);
                 break;
             case R.id.mediaplayer_test:
-                startActivity(GridViewActivity.class);
+                startActivity(GiftViewActivity.class);
                 break;
 
 
