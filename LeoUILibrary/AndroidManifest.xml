@@ -35,9 +35,10 @@
         <activity android:name="com.example.blurtest.activity.ViewPagerActivity"/>
         <activity android:name="com.example.blurtest.activity.GifActivity"/>
         <activity android:name="com.example.blurtest.activity.FancySearchBar"/>
-        <activity android:name="com.example.blurtest.activity.MediaplayerActivity"/>
+        <activity android:name=".activity.GiftViewActivity"/>
         <activity android:name="com.example.blurtest.activity.FancyDownloadProgressBar"/>
         <activity android:name="com.example.blurtest.activity.GridViewActivity"/>
+        <activity android:name="com.example.blurtest.activity.GraphicsTestActivity"/>
 
         <activity android:name="com.example.blurtest.activity.OkhttpActivity"/>
         <activity android:name="com.example.blurtest.draglayouttomenu.DragLayoutActivity"/>

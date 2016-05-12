@@ -56,6 +56,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
         Button mediaplayer_test = (Button) findViewById(R.id.mediaplayer_test);
         mediaplayer_test.setOnClickListener(this);
+
+        Button graphics_test = (Button) findViewById(R.id.graphics_test);
+        graphics_test.setOnClickListener(this);
+
     }
 
     @Override
@@ -101,8 +105,9 @@ public class MainActivity extends Activity implements OnClickListener {
             case R.id.mediaplayer_test:
                 startActivity(GiftViewActivity.class);
                 break;
-
-
+            case R.id.graphics_test:
+                startActivity(GraphicsTestActivity.class);
+                break;
             default:
                 break;
         }

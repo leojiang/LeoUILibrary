@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.blurtest.R;
 import com.example.blurtest.gif.GifHelper;
@@ -19,11 +20,14 @@ public class GifActivity extends Activity {
     ImageView iv;
     GifHelper.GifFrame[] frames;
     FileInputStream fis = null;
+    private TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gif);
+        mTextView = (TextView) findViewById(R.id.text);
+        mTextView.requestFocus();
 
 //        OkHttpClient client = new OkHttpClient();
 //        Request request = new Request.Builder()

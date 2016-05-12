@@ -84,6 +84,12 @@
             android:layout_height="wrap_content"
             android:text="Gift View Test"/>
 
+        <Button
+            android:id="@+id/graphics_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Graphics Test"/>
+
 
     </LinearLayout>
 </ScrollView>

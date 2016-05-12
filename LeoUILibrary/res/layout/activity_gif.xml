@@ -1,6 +1,8 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:attr="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
     android:layout_height="match_parent">
 
     <com.example.blurtest.view.GifImageView
@@ -13,4 +15,17 @@
         android:scaleType="fitCenter"
         attr:auto_play="false" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/text"
+        android:ellipsize="marquee"
+        android:textStyle="bold"
+        android:focusable="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="他们说这里是要放广告的，就是看看能不能动啊！长点...！！！！..."
+        android:gravity="center"
+        android:textSize="24sp"/>
+</LinearLayout>

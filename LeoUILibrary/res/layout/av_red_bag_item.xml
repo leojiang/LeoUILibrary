@@ -67,14 +67,14 @@
 
         <ImageView
             android:id="@+id/gift_img"
-            android:layout_width="51dp"
-            android:layout_height="match_parent"
+            android:layout_width="35dp"
+            android:layout_height="45dp"
             android:layout_alignRight="@+id/inner_content"
             android:src="@drawable/red_heart_1"
             />
     </RelativeLayout>
 
-    <TextView
+    <com.example.blurtest.view.CustomTextView
         android:id="@+id/count"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -83,9 +83,7 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:singleLine="true"
-        android:text="X100"
-        android:textColor="#00FF00"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:typeface="monospace"/>
+        android:typeface="normal"/>
 </LinearLayout>

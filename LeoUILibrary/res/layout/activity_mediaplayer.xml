@@ -8,15 +8,16 @@
         android:id="@+id/gratuity_item_container"
         android:layout_width="280dp"
         android:layout_height="130dp"
+        android:background="#FFFF00"
         android:animateLayoutChanges="true"
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="162.7dp"
+            android:layout_width="280dp"
             android:layout_height="65dp"/>
 
         <TextView
-            android:layout_width="162.7dp"
+            android:layout_width="280dp"
             android:layout_height="65dp"/>
     </com.example.blurtest.giftview.GratuityView>
 

@@ -67,16 +67,23 @@ public class GratuityView extends LinearLayout {
         init(context);
     }
 
-//    public GratuityView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-//        super(context, attrs, defStyleAttr, defStyleRes);
-//        init(context);
-//    }
-
     private void init(Context context) {
         mContext = context;
         mInflater = LayoutInflater.from(context);
-        setItemSize(BaseDensityUtil.dip2px(context, 280f), BaseDensityUtil.dip2px(context, 65f));
         initLayoutTransition();
+    }
+
+    private void measureChild() {
+        if (getChildCount() < 1) {
+            itemWidth = BaseDensityUtil.dip2px(mContext, 280f);
+            itemHeight = BaseDensityUtil.dip2px(mContext, 65f);
+            return;
+        }
+
+        View child = getChildAt(0);
+        child.measure(MeasureSpec.makeMeasureSpec(0, MeasureSpec.EXACTLY), MeasureSpec.makeMeasureSpec(0, MeasureSpec.EXACTLY));
+        itemWidth = child.getMeasuredWidth();
+        itemHeight = child.getMeasuredHeight();
     }
 
     public void addGratuityEntity(final GratuityEntity entity) {
@@ -213,12 +220,8 @@ public class GratuityView extends LinearLayout {
         }
     }
 
-    private void setItemSize(int width, int height) {
-        itemWidth = width;
-        itemHeight = height;
-    }
-
     private void initLayoutTransition() {
+        measureChild();
         LayoutTransition mTransition = getLayoutTransition();
         setLayoutTransition(mTransition);
 
