@@ -45,7 +45,7 @@ public class GraphicsTestActivity extends Activity {
             }
         });
 
-        mProgressAnimation = ValueAnimator.ofFloat(0, CIRCLE_ANGLE);
+        mProgressAnimation = ValueAnimator.ofFloat(0, CIRCLE_ANGLE).setDuration(500);
         mProgressAnimation.setStartDelay(500);
         mProgressAnimation.setInterpolator(new LinearInterpolator());
         mProgressAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -62,9 +62,8 @@ public class GraphicsTestActivity extends Activity {
                 mSuccessAnimation1.start();
             }
         });
-        mProgressAnimation.setDuration(500);
 
-        mSuccessAnimation1 = ValueAnimator.ofFloat(0, 1f);
+        mSuccessAnimation1 = ValueAnimator.ofFloat(0, 1f).setDuration(150);
         mSuccessAnimation1.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
@@ -72,7 +71,6 @@ public class GraphicsTestActivity extends Activity {
                 mCustomVIew.invalidate();
             }
         });
-        mSuccessAnimation1.setDuration(150);
         mSuccessAnimation1.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
@@ -81,7 +79,7 @@ public class GraphicsTestActivity extends Activity {
             }
         });
 
-        mSuccessAnimation2 = ValueAnimator.ofFloat(0, 1f);
+        mSuccessAnimation2 = ValueAnimator.ofFloat(0, 1f).setDuration(200);
         mSuccessAnimation2.setInterpolator(new OvershootInterpolator(1.2f));
         mSuccessAnimation2.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
@@ -90,7 +88,6 @@ public class GraphicsTestActivity extends Activity {
                 mCustomVIew.invalidate();
             }
         });
-        mSuccessAnimation2.setDuration(200);
 
         mCircleBounds = new RectF();
         mCircleBounds.top = 0f;
