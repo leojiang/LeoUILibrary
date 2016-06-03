@@ -1,31 +1,54 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:attr="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:orientation="vertical"
+    android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
 
     <com.example.blurtest.view.GifImageView
         android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:background="#846732"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/anim1"
         android:scaleType="fitCenter"
+        android:src="@drawable/anim1"
         attr:auto_play="false" />
+
+
+    <com.example.blurtest.view.MGifView
+        android:id="@+id/remote_gif"
+        android:layout_width="125dp"
+        android:layout_height="70dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitCenter" />
+
+
+    <com.example.blurtest.view.MGifView
+        android:id="@+id/remote_gif1"
+        android:layout_width="120dp"
+        android:layout_height="67dp"
+        android:background="#FFFF00"
+        android:scaleType="fitCenter" />
+
+    <ImageView
+        android:background="#FFFFFF"
+        android:id="@+id/glid_gif"
+        android:layout_width="120dp"
+        android:layout_height="90dp" />
+
 
     <TextView
         android:id="@+id/text"
-        android:ellipsize="marquee"
-        android:textStyle="bold"
-        android:focusable="true"
-        android:marqueeRepeatLimit="marquee_forever"
-        android:focusableInTouchMode="true"
-        android:singleLine="true"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:text="他们说这里是要放广告的，就是看看能不能动啊！长点...！！！！..."
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:gravity="center"
-        android:textSize="24sp"/>
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text=""
+        android:textSize="24sp"
+        android:textStyle="bold" />
 </LinearLayout>

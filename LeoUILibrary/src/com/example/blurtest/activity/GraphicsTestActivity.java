@@ -82,7 +82,7 @@ public class GraphicsTestActivity extends Activity {
         });
 
         mSuccessAnimation2 = ValueAnimator.ofFloat(0, 1f);
-        mSuccessAnimation2.setInterpolator(new OvershootInterpolator(1.2f));
+        mSuccessAnimation2.setInterpolator(new OvershootInterpolator(3f));
         mSuccessAnimation2.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
@@ -91,12 +91,6 @@ public class GraphicsTestActivity extends Activity {
             }
         });
         mSuccessAnimation2.setDuration(200);
-
-        mCircleBounds = new RectF();
-        mCircleBounds.top = 0f;
-        mCircleBounds.left = 0f;
-        mCircleBounds.bottom = CIRCLE_RADIUS * 2;
-        mCircleBounds.right = CIRCLE_RADIUS * 2;
     }
 
     private void resetValues() {
@@ -105,7 +99,6 @@ public class GraphicsTestActivity extends Activity {
         mCrossProgressValue2 = 0;
     }
 
-    private RectF mCircleBounds;
 
     @Override
     protected void onResume() {
@@ -119,17 +112,27 @@ public class GraphicsTestActivity extends Activity {
         private int delta1 = CIRCLE_RADIUS / 3;
         private int delta2 = CIRCLE_RADIUS / 3 * 2;
 
+        private Paint mDrawingPaint;
+        private RectF mCircleBounds;
+
         public CustomView(Context context) {
             super(context);
-        }
 
-        protected void onDraw(Canvas canvas) {
+            mCircleBounds = new RectF();
+            mCircleBounds.top = 0f;
+            mCircleBounds.left = 0f;
+            mCircleBounds.bottom = CIRCLE_RADIUS * 2;
+            mCircleBounds.right = CIRCLE_RADIUS * 2;
 
-            Paint mDrawingPaint = new Paint();
+            mDrawingPaint = new Paint();
             mDrawingPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
             mDrawingPaint.setStyle(Paint.Style.STROKE);
             mDrawingPaint.setColor(Color.parseColor("#FF0000"));
             mDrawingPaint.setStrokeWidth(STROKE_WIDTH);
+        }
+
+        protected void onDraw(Canvas canvas) {
+
             canvas.translate(getWidth() / 2 - CIRCLE_RADIUS, getWidth() / 2 - CIRCLE_RADIUS);
 
             //draw circle

@@ -11,10 +11,12 @@ apply plugin: 'com.android.application'
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
     compile files('libs/universal-image-loader-1.9.0.jar')
+    compile files('libs/picasso-2.5.2.jar')
+    compile files('libs/glide-3.6.1.jar')
 }
 
 android {
-    compileSdkVersion 15
+    compileSdkVersion 21
     buildToolsVersion "23.0.2"
 
     sourceSets {

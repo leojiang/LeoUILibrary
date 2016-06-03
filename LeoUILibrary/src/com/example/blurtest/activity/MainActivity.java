@@ -3,12 +3,30 @@ package com.example.blurtest.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 
+import com.bumptech.glide.GifTypeRequest;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestFutureTarget;
 import com.example.blurtest.R;
 import com.example.blurtest.draglayouttomenu.DragLayoutActivity;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class MainActivity extends Activity implements OnClickListener {
 
@@ -59,6 +77,28 @@ public class MainActivity extends Activity implements OnClickListener {
 
         Button graphics_test = (Button) findViewById(R.id.graphics_test);
         graphics_test.setOnClickListener(this);
+
+        for(int i = 0; i < urls.length; i++) {
+            final int j = i;
+            Glide.with(MainActivity.this).load(urls[j]).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(356, 200);
+//            new Thread() {
+//                @Override
+//                public void run() {
+//                    super.run();
+//                    Log.i("leojiang", "thread " + j +" started");
+////                    Glide.with(getApplicationContext()).load(urls[j]).downloadOnly(356, 200);
+//                    Glide.with(MainActivity.this).load(urls[j]).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(356, 200);
+//                }
+//            }.start();
+
+        }
+    }
+
+    public static String[] urls =
+            {"http://img2.100bt.com/upload/ttq/20130914/1379127831456_middle.gif",
+                    "http://photocdn.sohu.com/20150514/mp14940941_1431571108911_9.gif"};
+
+    private void loadGif() {
 
     }
 

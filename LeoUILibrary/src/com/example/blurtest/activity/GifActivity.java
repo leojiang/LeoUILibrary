@@ -1,131 +1,84 @@
 package com.example.blurtest.activity;
 
 import android.app.Activity;
-import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
+import android.os.Environment;
+import android.os.StrictMode;
+import android.text.Html;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.blurtest.R;
-import com.example.blurtest.gif.GifHelper;
-import com.example.blurtest.gif.GifHelper.GifFrame;
+import com.example.blurtest.view.MGifView;
 
-import java.io.FileInputStream;
+import java.net.URL;
 
 public class GifActivity extends Activity {
 
-    private PlayGifTask mGifTask;
-    ImageView iv;
-    GifHelper.GifFrame[] frames;
-    FileInputStream fis = null;
-    private TextView mTextView;
+    MGifView gifView;
+    ImageView glideGif;
+    MGifView glideGif0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        struct();
         setContentView(R.layout.activity_gif);
-        mTextView = (TextView) findViewById(R.id.text);
-        mTextView.requestFocus();
+        TextView textView = (TextView) findViewById(R.id.text);
+//        textView.setText(Html.fromHtml("<font size=\"3\" color=\"red\">呢称:</font>我说了一句话+<img src=\"http://p0.jmstatic.com/assets/cart.gif\" width=\"35\" height=\"35\">", imgGetter, null));
 
-//        OkHttpClient client = new OkHttpClient();
-//        Request request = new Request.Builder()
-//                .url("http://httpbin.org/delay/1") // This URL is served with a 1 second delay.
-//                .build();
-//        Response response = null;
-//        try {
-//            response = client.newCall(request).execute();
-//            response.newBuilder()
-//                    .header("Cache-Control", "max-age=60")
-//                    .build();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        gifView = (MGifView) findViewById(R.id.remote_gif);
+        glideGif0 = (MGifView) findViewById(R.id.remote_gif1);
+        glideGif = (ImageView) findViewById(R.id.glid_gif);
 
+//        gifView.setFileResource(MainActivity.urls[0]);
 
-//        iv = new ImageView(this);
-//        iv.setScaleType(ImageView.ScaleType.CENTER);
-//        setContentView(iv, new ViewGroup.LayoutParams(LayoutParams.FILL_PARENT,
-//                LayoutParams.FILL_PARENT));
-//
-//        final InputStream fis = getResources().openRawResource(R.raw.anim1);
-//
-//
-//        frames = CommonUtil.getGif(fis);
-//        mGifTask = new PlayGifTask(iv, frames);
-//        mGifTask.startTask();
-//        Thread th = new Thread(mGifTask);
-//        th.start();
+        Glide.with(this).load(MainActivity.urls[0]).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(gifView);
+        Glide.with(this).load(MainActivity.urls[0]).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(glideGif0);
+        Glide.with(this).load(MainActivity.urls[1]).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(glideGif);
+
+//        Glide.with(this).load(MainActivity.urls[0]).into(gifView);
+//        Glide.with(this).load(MainActivity.urls[0]).into(glideGif0);
+//        Glide.with(this).load(MainActivity.urls[1]).into(glideGif);
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (null != mGifTask) mGifTask.stopTask();
-
+    protected void onResume() {
+        super.onResume();
     }
 
-    //用来循环播放Gif每帧图片
-    private class PlayGifTask implements Runnable {
-        int i = 0;
-        ImageView iv;
-        GifFrame[] frames;
-        int framelen, oncePlayTime = 0;
-
-        public PlayGifTask(ImageView iv, GifFrame[] frames) {
-            this.iv = iv;
-            this.frames = frames;
-
-            int n = 0;
-            framelen = frames.length;
-            while (n < framelen) {
-                oncePlayTime += frames[n].delay;
-                n++;
+    Html.ImageGetter imgGetter = new Html.ImageGetter() {
+        public Drawable getDrawable(String source) {
+            Drawable drawable = null;
+            URL url;
+            try {
+                url = new URL(source);
+                drawable = Drawable.createFromStream(url.openStream(), ""); // 获取网路图片
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
             }
-
+            drawable.setBounds(0, 0, 100, 100);
+            return drawable;
         }
+    };
 
-        Handler h2 = new Handler() {
-            public void handleMessage(Message msg) {
-                switch (msg.what) {
-                    case 1:
-                        iv.setImageBitmap((Bitmap) msg.obj);
-                        break;
-                }
-            }
-
-            ;
-        };
-
-        @Override
-        public void run() {
-            if (!frames[i].image.isRecycled()) {
-                //      iv.setImageBitmap(frames[i].image);
-                Message m = Message.obtain(h2, 1, frames[i].image);
-                m.sendToTarget();
-            }
-            iv.postDelayed(this, frames[i++].delay);
-            i %= framelen;
-        }
-
-        public void startTask() {
-            iv.post(this);
-        }
-
-        public void stopTask() {
-            if (null != iv) iv.removeCallbacks(this);
-            iv = null;
-            if (null != frames) {
-                for (GifHelper.GifFrame frame : frames) {
-                    if (frame.image != null && !frame.image.isRecycled()) {
-                        frame.image.recycle();
-                        frame.image = null;
-                    }
-                }
-                frames = null;
-                //      mGifTask=null;
-            }
-        }
+    public static void struct() {
+        StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+                .detectDiskReads().detectDiskWrites().detectNetwork() // or
+                // .detectAll()
+                // for
+                // all
+                // detectable
+                // problems
+                .penaltyLog().build());
+        StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
+                .detectLeakedSqlLiteObjects() // 探测SQLite数据库操作
+                .penaltyLog() // 打印logcat
+                .penaltyDeath().build());
     }
 }
