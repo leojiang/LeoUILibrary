@@ -78,29 +78,15 @@ public class MainActivity extends Activity implements OnClickListener {
         Button graphics_test = (Button) findViewById(R.id.graphics_test);
         graphics_test.setOnClickListener(this);
 
-        for(int i = 0; i < urls.length; i++) {
+        for (int i = 0; i < urls.length; i++) {
             final int j = i;
-            Glide.with(MainActivity.this).load(urls[j]).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(356, 200);
-//            new Thread() {
-//                @Override
-//                public void run() {
-//                    super.run();
-//                    Log.i("leojiang", "thread " + j +" started");
-////                    Glide.with(getApplicationContext()).load(urls[j]).downloadOnly(356, 200);
-//                    Glide.with(MainActivity.this).load(urls[j]).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(356, 200);
-//                }
-//            }.start();
-
+            Glide.with(getApplicationContext()).load(urls[j]).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(356, 200);
         }
     }
 
     public static String[] urls =
             {"http://img2.100bt.com/upload/ttq/20130914/1379127831456_middle.gif",
                     "http://photocdn.sohu.com/20150514/mp14940941_1431571108911_9.gif"};
-
-    private void loadGif() {
-
-    }
 
     @Override
     public void onClick(View v) {

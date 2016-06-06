@@ -39,7 +39,7 @@ public class GifActivity extends Activity {
 
         Glide.with(this).load(MainActivity.urls[0]).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(gifView);
         Glide.with(this).load(MainActivity.urls[0]).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(glideGif0);
-        Glide.with(this).load(MainActivity.urls[1]).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(glideGif);
+        Glide.with(this).load(MainActivity.urls[0]).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(glideGif);
 
 //        Glide.with(this).load(MainActivity.urls[0]).into(gifView);
 //        Glide.with(this).load(MainActivity.urls[0]).into(glideGif0);
