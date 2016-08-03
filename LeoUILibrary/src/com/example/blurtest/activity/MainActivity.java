@@ -17,6 +17,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestFutureTarget;
 import com.example.blurtest.R;
 import com.example.blurtest.draglayouttomenu.DragLayoutActivity;
+import com.example.blurtest.util.BadgeUtil;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -82,6 +83,8 @@ public class MainActivity extends Activity implements OnClickListener {
             final int j = i;
             Glide.with(getApplicationContext()).load(urls[j]).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(356, 200);
         }
+
+        BadgeUtil.setBadgeCount(getApplicationContext(), 99);
     }
 
     public static String[] urls =
