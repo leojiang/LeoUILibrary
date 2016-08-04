@@ -14,6 +14,8 @@ public class SudokuActivity extends Activity {
         setContentView(R.layout.activity_sudoku);
 
         String[] urls = {
+//                "http://a2.att.hudong.com/14/06/20300001244055130863068274072.jpg",
+//                "http://mg.soupingguo.com/bizhi/big/10/054/203/10054203.jpg",
 //        "http://a2.att.hudong.com/14/06/20300001244055130863068274072.jpg",
 //        "http://mg.soupingguo.com/bizhi/big/10/054/203/10054203.jpg",
         "http://a0.att.hudong.com/51/47/01300000098168123480478377186.jpg",
@@ -26,7 +28,5 @@ public class SudokuActivity extends Activity {
 
         FancyImageLayout layout = (FancyImageLayout) findViewById(R.id.imagelayout);
         layout.setImageSources(urls);
-
-        layout.requestLayout();
     }
 }

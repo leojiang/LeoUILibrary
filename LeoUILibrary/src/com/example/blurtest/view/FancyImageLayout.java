@@ -77,23 +77,14 @@ public class FancyImageLayout extends ViewGroup {
             case 1:
                 return measureItems5Excluded(totalWidth, 1);
             case 2:
-                return measureItems5Excluded(totalWidth, 2);
             case 3:
-                return measureItems5Excluded(totalWidth, 2);
             case 4:
                 return measureItems5Excluded(totalWidth, 2);
-            case 5:
-                return measureItems5Excluded(totalWidth, 3);
             case 6:
                 return measure6Item(totalWidth);
-            case 7:
-                return measureItems5Excluded(totalWidth, 3);
-            case 8:
-                return measureItems5Excluded(totalWidth, 3);
-            case 9:
+            default:
                 return measureItems5Excluded(totalWidth, 3);
         }
-        return 0;
     }
 
 
