@@ -36,48 +36,53 @@ public class MainActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnImageFilter = (Button) findViewById(R.id.image_filter);
-        btnImageFilter.setOnClickListener(this);
+        Button button;
 
-        Button btnGifImage = (Button) findViewById(R.id.gif_test);
-        btnGifImage.setOnClickListener(this);
+        button = (Button) findViewById(R.id.image_filter);
+        button.setOnClickListener(this);
+
+        button = (Button) findViewById(R.id.gif_test);
+        button.setOnClickListener(this);
 
 
-        Button btnViewPager = (Button) findViewById(R.id.viewpager_test);
-        btnViewPager.setOnClickListener(this);
+        button = (Button) findViewById(R.id.viewpager_test);
+        button.setOnClickListener(this);
 
-        Button btnDragLayout = (Button) findViewById(R.id.drag_layout_test);
-        btnDragLayout.setOnClickListener(this);
+        button = (Button) findViewById(R.id.drag_layout_test);
+        button.setOnClickListener(this);
 
-        Button btnSatellites = (Button) findViewById(R.id.satellites);
-        btnSatellites.setOnClickListener(this);
+        button = (Button) findViewById(R.id.satellites);
+        button.setOnClickListener(this);
 
-//        Button btnClassLoaderTest = (Button) findViewById(R.id.ClassLoaderTest);
-//        btnClassLoaderTest.setOnClickListener(this);
+//        button = (Button) findViewById(R.id.ClassLoaderTest);
+//        button.setOnClickListener(this);
 //
-//        Button btnGesture = (Button) findViewById(R.id.gesture_test);
-//        btnGesture.setOnClickListener(this);
+//        button = (Button) findViewById(R.id.gesture_test);
+//        button.setOnClickListener(this);
 
-        Button btnTransition = (Button) findViewById(R.id.layout_test);
-        btnTransition.setOnClickListener(this);
+        button = (Button) findViewById(R.id.layout_test);
+        button.setOnClickListener(this);
 
-//        Button html5Test = (Button) findViewById(R.id.html5_test);
-//        html5Test.setOnClickListener(this);
+//        button = (Button) findViewById(R.id.html5_test);
+//        button.setOnClickListener(this);
 //
-//        Button okhttp_test = (Button) findViewById(R.id.okhttp_test);
-//        okhttp_test.setOnClickListener(this);
+//        button = (Button) findViewById(R.id.okhttp_test);
+//        button.setOnClickListener(this);
 
-        Button vector_drawable = (Button) findViewById(R.id.vector_drawable);
-        vector_drawable.setOnClickListener(this);
+        button = (Button) findViewById(R.id.vector_drawable);
+        button.setOnClickListener(this);
 
-        Button download_progress = (Button) findViewById(R.id.download_progress);
-        download_progress.setOnClickListener(this);
+        button = (Button) findViewById(R.id.download_progress);
+        button.setOnClickListener(this);
 
-        Button mediaplayer_test = (Button) findViewById(R.id.mediaplayer_test);
-        mediaplayer_test.setOnClickListener(this);
+        button = (Button) findViewById(R.id.mediaplayer_test);
+        button.setOnClickListener(this);
 
-        Button graphics_test = (Button) findViewById(R.id.graphics_test);
-        graphics_test.setOnClickListener(this);
+        button = (Button) findViewById(R.id.graphics_test);
+        button.setOnClickListener(this);
+
+        button = (Button) findViewById(R.id.sudoku_layout_test);
+        button.setOnClickListener(this);
 
         for (int i = 0; i < urls.length; i++) {
             final int j = i;
@@ -137,6 +142,10 @@ public class MainActivity extends Activity implements OnClickListener {
             case R.id.graphics_test:
                 startActivity(GraphicsTestActivity.class);
                 break;
+            case R.id.sudoku_layout_test:
+                startActivity(SudokuActivity.class);
+                break;
+
             default:
                 break;
         }
