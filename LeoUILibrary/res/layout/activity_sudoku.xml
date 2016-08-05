@@ -15,66 +15,75 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin">
 
-        <com.example.blurtest.view.FancyImageLayout
+        <com.example.blurtest.view.FancyImageView
             android:id="@+id/imagelayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
+            android:background="@android:color/white"
             custom:item_gap="4dp" />
 
-        <com.example.blurtest.view.FancyImageLayout
+        <com.example.blurtest.view.FancyImageView
             android:id="@+id/imagelayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
+            android:background="@android:color/holo_blue_bright"
             custom:item_gap="4dp" />
 
-        <com.example.blurtest.view.FancyImageLayout
+        <com.example.blurtest.view.FancyImageView
             android:id="@+id/imagelayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
+            android:background="@android:color/holo_green_light"
             custom:item_gap="4dp" />
 
-        <com.example.blurtest.view.FancyImageLayout
+        <com.example.blurtest.view.FancyImageView
             android:id="@+id/imagelayout4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
+            android:background="@android:color/holo_blue_dark"
             custom:item_gap="4dp" />
 
-        <com.example.blurtest.view.FancyImageLayout
+        <com.example.blurtest.view.FancyImageView
             android:id="@+id/imagelayout5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
+            android:background="@android:color/white"
             custom:item_gap="4dp" />
 
-        <com.example.blurtest.view.FancyImageLayout
+        <com.example.blurtest.view.FancyImageView
             android:id="@+id/imagelayout6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
+            android:background="@android:color/white"
             custom:item_gap="4dp" />
 
-        <com.example.blurtest.view.FancyImageLayout
+        <com.example.blurtest.view.FancyImageView
             android:id="@+id/imagelayout7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
+            android:background="@android:color/white"
             custom:item_gap="4dp" />
 
-        <com.example.blurtest.view.FancyImageLayout
+        <com.example.blurtest.view.FancyImageView
             android:id="@+id/imagelayout8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
+            android:background="@android:color/white"
             custom:item_gap="4dp" />
 
-        <com.example.blurtest.view.FancyImageLayout
+        <com.example.blurtest.view.FancyImageView
             android:id="@+id/imagelayout9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/white"
             custom:item_gap="4dp" />
 
 

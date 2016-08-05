@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import com.example.blurtest.R;
-import com.example.blurtest.view.FancyImageLayout;
+import com.example.blurtest.view.FancyImageView;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -29,39 +29,39 @@ public class SudokuActivity extends Activity {
         List<String> urlList = new LinkedList<>();
         int count = 0;
 
-        FancyImageLayout layout = (FancyImageLayout) findViewById(R.id.imagelayout1);
+        FancyImageView layout = (FancyImageView) findViewById(R.id.imagelayout1);
         urlList.add(urls[count++]);
         layout.setImageSources(urlList.toArray());
 
-        layout = (FancyImageLayout) findViewById(R.id.imagelayout2);
+        layout = (FancyImageView) findViewById(R.id.imagelayout2);
         urlList.add(urls[count++]);
         layout.setImageSources(urlList.toArray());
 
-        layout = (FancyImageLayout) findViewById(R.id.imagelayout3);
+        layout = (FancyImageView) findViewById(R.id.imagelayout3);
         urlList.add(urls[count++]);
         layout.setImageSources(urlList.toArray());
 
-        layout = (FancyImageLayout) findViewById(R.id.imagelayout4);
+        layout = (FancyImageView) findViewById(R.id.imagelayout4);
         urlList.add(urls[count++]);
         layout.setImageSources(urlList.toArray());
 
-        layout = (FancyImageLayout) findViewById(R.id.imagelayout5);
+        layout = (FancyImageView) findViewById(R.id.imagelayout5);
         urlList.add(urls[count++]);
         layout.setImageSources(urlList.toArray());
 
-        layout = (FancyImageLayout) findViewById(R.id.imagelayout6);
+        layout = (FancyImageView) findViewById(R.id.imagelayout6);
         urlList.add(urls[count++]);
         layout.setImageSources(urlList.toArray());
 
-        layout = (FancyImageLayout) findViewById(R.id.imagelayout7);
+        layout = (FancyImageView) findViewById(R.id.imagelayout7);
         urlList.add(urls[count++]);
         layout.setImageSources(urlList.toArray());
 
-        layout = (FancyImageLayout) findViewById(R.id.imagelayout8);
+        layout = (FancyImageView) findViewById(R.id.imagelayout8);
         urlList.add(urls[count++]);
         layout.setImageSources(urlList.toArray());
 
-        layout = (FancyImageLayout) findViewById(R.id.imagelayout9);
+        layout = (FancyImageView) findViewById(R.id.imagelayout9);
         urlList.add(urls[count]);
         layout.setImageSources(urlList.toArray());
     }

@@ -6,7 +6,7 @@
         <attr name="android:src" />
     </declare-styleable>
 
-    <declare-styleable name="FancyImageLayout">
+    <declare-styleable name="FancyImageView">
         <attr name="item_gap" format="dimension"></attr>
     </declare-styleable>
 
