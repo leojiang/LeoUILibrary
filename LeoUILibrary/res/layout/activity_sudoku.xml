@@ -1,20 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#fC5C6C"
-    tools:context="com.example.blurtest.activity.SudokuActivity">
+    android:layout_height="wrap_content">
 
-    <com.example.blurtest.view.FancyImageLayout
-        android:id="@+id/imagelayout"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#fC5C6C"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
 
-    </com.example.blurtest.view.FancyImageLayout>
+        <com.example.blurtest.view.FancyImageLayout
+            android:id="@+id/imagelayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            custom:item_gap="4dp" />
 
-</RelativeLayout>
+        <com.example.blurtest.view.FancyImageLayout
+            android:id="@+id/imagelayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            custom:item_gap="4dp" />
+
+        <com.example.blurtest.view.FancyImageLayout
+            android:id="@+id/imagelayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            custom:item_gap="4dp" />
+
+        <com.example.blurtest.view.FancyImageLayout
+            android:id="@+id/imagelayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            custom:item_gap="4dp" />
+
+        <com.example.blurtest.view.FancyImageLayout
+            android:id="@+id/imagelayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            custom:item_gap="4dp" />
+
+        <com.example.blurtest.view.FancyImageLayout
+            android:id="@+id/imagelayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            custom:item_gap="4dp" />
+
+        <com.example.blurtest.view.FancyImageLayout
+            android:id="@+id/imagelayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            custom:item_gap="4dp" />
+
+        <com.example.blurtest.view.FancyImageLayout
+            android:id="@+id/imagelayout8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            custom:item_gap="4dp" />
+
+        <com.example.blurtest.view.FancyImageLayout
+            android:id="@+id/imagelayout9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:item_gap="4dp" />
+
+
+    </LinearLayout>
+</ScrollView>
