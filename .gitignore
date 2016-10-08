@@ -1,5 +1,5 @@
 LeoUILibrary/build
-LeoUILibrary/gradle
+#LeoUILibrary/gradle
 LeoUILibrary/.gradle
 LeoUILibrary/bin
 LeoUILibrary/.idea
