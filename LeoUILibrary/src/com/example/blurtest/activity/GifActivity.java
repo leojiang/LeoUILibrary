@@ -27,6 +27,7 @@ public class GifActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        struct();
+
         setContentView(R.layout.activity_gif);
         TextView textView = (TextView) findViewById(R.id.text);
 //        textView.setText(Html.fromHtml("<font size=\"3\" color=\"red\">呢称:</font>我说了一句话+<img src=\"http://p0.jmstatic.com/assets/cart.gif\" width=\"35\" height=\"35\">", imgGetter, null));
