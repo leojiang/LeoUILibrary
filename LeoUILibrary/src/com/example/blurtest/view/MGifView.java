@@ -68,29 +68,29 @@ public class MGifView extends ImageView {
         movie = Movie.decodeStream(getResources().openRawResource(id));
         refresh();
     }
-
-    public void setFileResource(final String filename) {
-//        pools.execute(new Runnable() {
-//            @Override
-//            public void run() {
-                try {
-                    File file = new File(filename);
-                    FileInputStream fis = new FileInputStream(file);
-                    byte[] buffer = new byte[1024];
-                    while(fis.read(buffer) > 0) {
-                    }
-
-                    Log.i("leojiang", "buffer: " + buffer);
-
-                    handler.obtainMessage(1, buffer).sendToTarget();
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-//            }
-//        });
-
-    }
+//
+//    public void setFileResource(final String filename) {
+////        pools.execute(new Runnable() {
+////            @Override
+////            public void run() {
+//                try {
+//                    File file = new File(filename);
+//                    FileInputStream fis = new FileInputStream(file);
+//                    byte[] buffer = new byte[1024];
+//                    while(fis.read(buffer) > 0) {
+//                    }
+//
+//                    Log.i("leojiang", "buffer: " + buffer);
+//
+//                    handler.obtainMessage(1, buffer).sendToTarget();
+//
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+////            }
+////        });
+//
+//    }
 
     public void setResource(final String urlstr) {
         pools.execute(new Runnable() {

@@ -106,7 +106,7 @@ public class GiftViewActivity extends Activity implements View.OnClickListener {
         entity.setGiftImgUrl(gifts[type]);
         entity.setType("type" + type);
         entity.setUid(names[type]);
-        entity.setCount("" + typeCount[type]);
+        entity.setCount(String.valueOf(typeCount[type]));
         mGratuityView.addGratuityEntity(entity);
     }
 

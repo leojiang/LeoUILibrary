@@ -86,9 +86,8 @@ public class GridViewActivity extends Activity {
             if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
                 //滚动到底部
                 if (view.getLastVisiblePosition() == (view.getCount() - 1)) {
-                    View v = (View) view.getChildAt(view.getChildCount() - 1);
+                    View v = view.getChildAt(view.getChildCount() - 1);
                     int[] location = new int[2];
-                    int bottom = view.getBottom();
                     v.getLocationOnScreen(location);//获取在整个屏幕内的绝对坐标
                     int y = location[1];
                     int itemheight = v.getHeight();

@@ -29,7 +29,7 @@ public class GifActivity extends Activity {
 //        struct();
 
         setContentView(R.layout.activity_gif);
-        TextView textView = (TextView) findViewById(R.id.text);
+//        TextView textView = (TextView) findViewById(R.id.text);
 //        textView.setText(Html.fromHtml("<font size=\"3\" color=\"red\">呢称:</font>我说了一句话+<img src=\"http://p0.jmstatic.com/assets/cart.gif\" width=\"35\" height=\"35\">", imgGetter, null));
 
         gifView = (MGifView) findViewById(R.id.remote_gif);
@@ -60,7 +60,7 @@ public class GifActivity extends Activity {
                 url = new URL(source);
                 drawable = Drawable.createFromStream(url.openStream(), ""); // 获取网路图片
             } catch (Exception e) {
-                e.printStackTrace();
+                Log.i("GifActivity", e.getMessage());
                 return null;
             }
             drawable.setBounds(0, 0, 100, 100);

@@ -3,6 +3,7 @@ package com.example.blurtest.activity;
 import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -42,6 +43,7 @@ public class ClassLoaderActivity extends Activity implements View.OnClickListene
         try {
             Class.forName("dalvik.system.BaseDexClassLoader");
         } catch (ClassNotFoundException e) {
+            e.printStackTrace();
             hasBaseDexClassLoader = false;
         }
 
@@ -50,7 +52,6 @@ public class ClassLoaderActivity extends Activity implements View.OnClickListene
                 Application application = getApplication();
                 PathClassLoader pathClassLoader = (PathClassLoader) application.getClassLoader();
 
-                DexClassLoader dexClassLoader = new DexClassLoader(libPath, application.getDir("dex", 0).getAbsolutePath(), libPath, application.getClassLoader());
                 Class classInstance = DexClassLoader.class.getSuperclass();
                 Field field = classInstance.getDeclaredField("pathList");
                 field.setAccessible(true);
@@ -70,9 +71,8 @@ public class ClassLoaderActivity extends Activity implements View.OnClickListene
 
                 return "SUCCESS";
 
-            } catch (Throwable e) {
-
-                e.printStackTrace();
+            } catch (Exception e) {
+                Log.i("GifActivity", e.getMessage());
                 mText.setText(e.toString());
 
                 return android.util.Log.getStackTraceString(e);

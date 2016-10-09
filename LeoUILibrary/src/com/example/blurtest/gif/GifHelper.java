@@ -5,6 +5,7 @@ import java.util.Vector;
 
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
+import android.util.Log;
 
 //Handler for read & extract Bitmap from *.gif  
 public class GifHelper {
@@ -243,13 +244,14 @@ public class GifHelper {
                     status = STATUS_FORMAT_ERROR;
                 }
             }
+            try {
+                is.close();
+            } catch (Exception e) {
+                Log.e("GifHelper", e.getMessage());
+                e.printStackTrace();
+            }
         } else {
             status = STATUS_OPEN_ERROR;
-        }
-        try {
-            is.close();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
         return status;
     }
@@ -262,14 +264,14 @@ public class GifHelper {
             for (int i = 0; i < 6; i++) {
                 id += (char) read();
             }
+            try {
+                is.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             if (!id.toUpperCase().startsWith("GIF")) {
                 return false;
             }
-        }
-        try {
-            is.close();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
         return true;
     }
