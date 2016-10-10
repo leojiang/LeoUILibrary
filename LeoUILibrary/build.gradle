@@ -40,7 +40,7 @@ android {
             buildConfigField "boolean", "LOG_DEBUG", "true"
 
             versionNameSuffix "-debug"
-            minifyEnabled false
+            minifyEnabled true
             zipAlignEnabled false
             shrinkResources false
         }
@@ -49,7 +49,7 @@ android {
             // 不显示Log
             buildConfigField "boolean", "LOG_DEBUG", "false"
             //混淆
-            minifyEnabled false
+            minifyEnabled true
             //Zipalign优化
             zipAlignEnabled true
 
