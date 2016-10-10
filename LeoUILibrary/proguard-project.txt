@@ -142,3 +142,5 @@
 }
 
 -libraryjars libs/*.jar
+
+-keep class android.support.v4.app.** { *; }
