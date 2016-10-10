@@ -16,9 +16,6 @@
 # and specify the fully qualified class name to the JavaScript interface
 # class:
 
-#ignor warning
--dontwarn
-
 #忽略警告
 -ignorewarning
 
@@ -66,6 +63,8 @@
 
 #如果引用了v4或者v7包
 -dontwarn android.support.**
+
+-dontwarn
 
 -keep public class * extends android.app.Activity
 -keep public class * extends android.app.Application
