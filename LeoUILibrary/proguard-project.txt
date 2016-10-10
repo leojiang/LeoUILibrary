@@ -148,7 +148,9 @@
     *;
 }
 
--keep class com.example.blurtest.*$* {
-    public <fields>;
-    public <methods>;
+-keep class com.example.blurtest.view.DownloadProgressBar$DownloadProgressBar {
+    *;
+}
+-keep class com.example.blurtest.view.DownloadProgressBar$AnimatorListener {
+    *;
 }
