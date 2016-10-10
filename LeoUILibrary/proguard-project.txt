@@ -15,9 +15,6 @@
 # If your project uses WebView with JS, uncomment the following
 # and specify the fully qualified class name to the JavaScript interface
 # class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#public *;
-#}
 
 #ignor warning
 -dontwarn
@@ -89,6 +86,13 @@
     native <methods>;
 }
 
+-keep public class * extends android.view.View {
+    public <init>(android.content.Context);
+    public <init>(android.content.Context, android.util.AttributeSet);
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+    public void set*(...);
+}
+
 #保持自定义控件类不被混淆
 -keepclasseswithmembers class * {
     public <init>(android.content.Context, android.util.AttributeSet);
@@ -104,6 +108,11 @@
 #保持 native 方法不被混淆
 -keepclasseswithmembernames class * {
     native <methods>;
+}
+
+-keepclassmembers class * extends android.content.Context {
+   public void *(android.view.View);
+   public void *(android.view.MenuItem);
 }
 
 #保持 Parcelable 不被混淆
@@ -132,3 +141,4 @@
     public static <fields>;
 }
 
+-libraryjars libs/*.jar
