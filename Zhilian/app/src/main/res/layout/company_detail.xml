@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include android:id="@+id/navigation_bar"
+             layout="@layout/navigation_bar_layout"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        android:src="@drawable/advertisement">
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height_14"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+        android:layout_marginTop="@dimen/padding_or_margin_size_5">
+
+        <TextView
+            android:id="@+id/company"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_shllow_blue"
+            android:gravity="center"
+            android:text="公司信息"
+            android:textColor="@color/color_bg_white"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/jobs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="职位信息"
+            android:textColor="@color/text_black"
+            android:textSize="16dp"/>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:overScrollMode="never"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:id="@+id/company_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:padding="10dp"
+                    android:textColor="#666666"
+                    android:id="@+id/job_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#55CCCCCC"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/padding_or_margin_size_10"
+                    android:text="公司简介"
+                    android:textSize="16dp"/>
+
+
+                <TextView
+                    android:padding="10dp"
+                    android:textColor="#666666"
+                    android:id="@+id/company_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#55CCCCCC"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/padding_or_margin_size_10"
+                    android:text="公司环境"
+                    android:textSize="16dp"/>
+
+                <com.zhi.gui.guide.view.HorizontalListView
+                    android:id="@+id/gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/jobs_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ListView
+                android:background="@color/color_bg_white"
+                android:listSelector="@drawable/button_bg_selector_white_to_green"
+                android:id="@+id/job_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="200dp"
+                android:overScrollMode="never">
+            </ListView>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

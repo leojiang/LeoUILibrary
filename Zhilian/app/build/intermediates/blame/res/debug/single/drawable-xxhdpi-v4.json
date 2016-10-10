@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/yhjiang/workspace/tmp/LeoUILibrary/Zhilian/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/advertisement.jpg",
+        "source": "/Users/yhjiang/workspace/tmp/LeoUILibrary/Zhilian/app/src/main/res/drawable-xxhdpi/advertisement.jpg"
+    },
+    {
+        "merged": "/Users/yhjiang/workspace/tmp/LeoUILibrary/Zhilian/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/dog.jpg",
+        "source": "/Users/yhjiang/workspace/tmp/LeoUILibrary/Zhilian/app/src/main/res/drawable-xxhdpi/dog.jpg"
+    },
+    {
+        "merged": "/Users/yhjiang/workspace/tmp/LeoUILibrary/Zhilian/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/my_info_bg.jpg",
+        "source": "/Users/yhjiang/workspace/tmp/LeoUILibrary/Zhilian/app/src/main/res/drawable-xxhdpi/my_info_bg.jpg"
+    },
+    {
+        "merged": "/Users/yhjiang/workspace/tmp/LeoUILibrary/Zhilian/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/img_login_bg.jpg",
+        "source": "/Users/yhjiang/workspace/tmp/LeoUILibrary/Zhilian/app/src/main/res/drawable-xxhdpi/img_login_bg.jpg"
+    }
+]

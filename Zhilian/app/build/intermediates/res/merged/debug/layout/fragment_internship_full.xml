@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/tab_page_bottom_color"
+              android:baselineAligned="false"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_bg_green_1"
+        android:gravity="center_vertical"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/search_bar_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/search_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="13dp"
+                android:text="输入职位或公司名"
+                android:textColor="#a3d1bb"
+                android:textSize="@dimen/text_size_14"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/advertisement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+
+        android:scaleType="centerInside"
+        android:src="@drawable/advertisement"
+        android:visibility="visible"/>
+
+
+    <LinearLayout
+        android:id="@+id/competence_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height_14"
+            android:layout_marginBottom="1dp"
+            android:background="@color/tab_page_content_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#7fc369"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:text="我的职业目标方向"
+                android:textColor="@color/color_bg_white"
+                android:textSize="@dimen/text_size_13.5"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_size_13.5"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height_14"
+            android:layout_marginBottom="3dp"
+            android:background="@color/tab_page_content_bg">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/padding_or_margin_size_5"
+                    android:drawableRight="@drawable/competence"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:text="我的求职力:"
+                    android:textSize="@dimen/text_size_13.5"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/text_size_13.5"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@color/tab_page_content_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/padding_or_margin_size_5"
+                    android:drawableRight="@drawable/ranking"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:text="排名:"
+                    android:textSize="@dimen/text_size_13.5"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/text_size_13.5"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/target_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height_15"
+                android:layout_marginBottom="@dimen/padding_or_margin_size_3"
+                android:background="@color/tab_page_content_bg"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/personal_info"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="完善个人信息，提升求职力"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_13.5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:text="未完成"
+                    android:textColor="@color/color_bg_green_1"
+                    android:textSize="@dimen/text_size_13.5"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height_15"
+                android:layout_marginBottom="@dimen/padding_or_margin_size_3"
+                android:background="@color/tab_page_content_bg"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/personal_info"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="完善个人信息，提升求职力"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_13.5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:text="未完成"
+                    android:textColor="@color/color_bg_green_1"
+                    android:textSize="@dimen/text_size_13.5"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height_15"
+                android:layout_marginBottom="@dimen/padding_or_margin_size_3"
+                android:background="@color/tab_page_content_bg"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/personal_info"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="完善个人信息，提升求职力"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_13.5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:text="未完成"
+                    android:textColor="@color/color_bg_green_1"
+                    android:textSize="@dimen/text_size_13.5"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height_15"
+                android:layout_marginBottom="@dimen/padding_or_margin_size_3"
+                android:background="@color/tab_page_content_bg"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/personal_info"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="完善个人信息，提升求职力"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_13.5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:text="未完成"
+                    android:textColor="@color/color_bg_green_1"
+                    android:textSize="@dimen/text_size_13.5"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.zhi.gui.guide.view.RefreshableView
+        android:id="@+id/refreshable_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="visible">
+
+        <com.zhi.gui.guide.view.ListViewForScrollView
+            android:listSelector="@drawable/button_bg_selector_white_to_green"
+            android:background="@color/color_bg_white"
+            android:id="@+id/list_internships"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"/>
+    </com.zhi.gui.guide.view.RefreshableView>
+
+</LinearLayout>

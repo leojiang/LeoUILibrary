@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/tab_page_bottom_color"
+              android:baselineAligned="false">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/padding_or_margin_size_3"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height_15"
+            android:background="@color/tab_page_content_bg"
+            android:gravity="center"
+            android:text="@string/title_industry"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_13.5"/>
+
+        <ListView
+            android:id="@+id/list_industry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_or_margin_size_3"
+            android:background="@color/color_bg_white"
+            android:listSelector="@drawable/button_bg_selector_white_to_green"
+            android:overScrollMode="never"
+            android:scrollbars="none"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/padding_or_margin_size_6"
+        android:layout_marginTop="@dimen/padding_or_margin_size_3"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height_15"
+            android:background="@color/tab_page_content_bg"
+            android:gravity="center"
+            android:text="@string/title_ranking"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_13.5"/>
+
+        <com.zhi.gui.guide.view.RefreshableView
+            android:id="@+id/refreshable_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/padding_or_margin_size_3"
+            android:layout_weight="1">
+
+            <ListView
+                android:id="@+id/list_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_bg_white"
+                android:listSelector="@drawable/button_bg_selector_white_to_green"
+                android:overScrollMode="never"
+                android:scrollbars="none"/>
+        </com.zhi.gui.guide.view.RefreshableView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height_12"
+            android:layout_marginBottom="@dimen/padding_or_margin_size_6"
+            android:layout_marginTop="@dimen/padding_or_margin_size_6"
+            android:background="@drawable/button_bg_selector_white_with_green_border"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/tip_login_to_check_competence"
+            android:textColor="@color/color_bg_green_1"
+            android:textSize="@dimen/text_size_11"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="44dp"
+              android:background="#fafafa">
+
+    <ImageView
+        android:id="@+id/back_img"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_navigation_bg"
+        android:clickable="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/navigation_back_img"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="导航栏"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/text_size_15"/>
+
+    <ImageView
+        android:id="@+id/setting_img"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_navigation_bg"
+        android:clickable="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/navigation_more_img"/>
+</LinearLayout>

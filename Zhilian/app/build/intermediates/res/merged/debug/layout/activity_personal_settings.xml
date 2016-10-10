@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/navigation_bar"
+        layout="@layout/navigation_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height_15"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_3"
+        android:layout_marginTop="@dimen/padding_or_margin_size_3"
+        android:background="@drawable/button_bg_selector_white_to_green"
+        android:clickable="true"
+        android:drawableLeft="@drawable/mesage_notification"
+        android:drawablePadding="@dimen/padding_or_margin_size_6"
+        android:drawableRight="@drawable/right_arrow"
+        android:gravity="center_vertical"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:text="新消息提醒"
+        android:textSize="@dimen/text_size_13.5"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height_15"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_3"
+        android:background="@drawable/button_bg_selector_white_to_green"
+        android:clickable="true"
+        android:drawableLeft="@drawable/account_setting"
+        android:drawablePadding="@dimen/padding_or_margin_size_6"
+        android:drawableRight="@drawable/right_arrow"
+        android:gravity="center_vertical"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:text="账号设置"
+        android:textSize="@dimen/text_size_13.5"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height_15"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_3"
+        android:background="@drawable/button_bg_selector_white_to_green"
+        android:clickable="true"
+        android:drawableLeft="@drawable/privacy_setting"
+        android:drawablePadding="@dimen/padding_or_margin_size_6"
+        android:drawableRight="@drawable/right_arrow"
+        android:gravity="center_vertical"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:text="隐私设置"
+        android:textSize="@dimen/text_size_13.5"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height_15"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_3"
+        android:background="@drawable/button_bg_selector_white_to_green"
+        android:clickable="true"
+        android:drawableLeft="@drawable/about_us"
+        android:drawablePadding="@dimen/padding_or_margin_size_6"
+        android:drawableRight="@drawable/right_arrow"
+        android:gravity="center_vertical"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:text="关于我们"
+        android:textSize="@dimen/text_size_13.5"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height_15"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_3"
+        android:background="@drawable/button_bg_selector_white_to_green"
+        android:clickable="true"
+        android:drawableLeft="@drawable/help_center"
+        android:drawablePadding="@dimen/padding_or_margin_size_6"
+        android:drawableRight="@drawable/right_arrow"
+        android:gravity="center_vertical"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:text="帮助中心"
+        android:textSize="@dimen/text_size_13.5"/>
+
+    <TextView
+        android:id="@+id/btn_log_out"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/button_bg_selector_green"
+        android:gravity="center"
+        android:text="退出账号"
+        android:textColor="@color/color_bg_white"
+        android:textSize="@dimen/text_size_13"/>
+
+</LinearLayout>

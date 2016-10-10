@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <include android:id="@+id/navigation_bar"
+             layout="@layout/navigation_bar_layout"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        android:src="@drawable/advertisement">
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height_14"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+        android:layout_marginTop="@dimen/padding_or_margin_size_5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_shllow_blue"
+            android:gravity="center"
+            android:text="职位名称"
+            android:textColor="@color/color_bg_white"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="求职分数"
+            android:textSize="16dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:padding="10dp"
+        android:textColor="#666666"
+        android:textSize="10dp"
+        android:id="@+id/job_description"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+    <TextView
+        android:paddingLeft="@dimen/padding_or_margin_size_10"
+        android:gravity="center_vertical"
+        android:text="XXX科技有限公司"
+        android:textSize="16dp"
+        android:background="#55CCCCCC"
+        android:id="@+id/company_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:background="@drawable/button_bg_selector_white_to_green"
+        android:clickable="true"
+        android:padding="10dp"
+        android:textSize="10dp"
+        android:textColor="@color/color_bg_red"
+        android:gravity="center"
+        android:text="点我试试~~"
+        android:id="@+id/company_description"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height_14"
+        android:layout_marginBottom="13dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp">
+
+        <TextView
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg_selector_green"
+            android:gravity="center"
+            android:text="投递简历"
+            android:textColor="@color/color_bg_white"
+            android:textSize="@dimen/text_size_14"/>
+
+        <TextView
+            android:id="@+id/follow"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="13dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg_selector_orange"
+            android:gravity="center"
+            android:text="现在关注"
+            android:textColor="@color/color_bg_white"
+            android:textSize="@dimen/text_size_14"/>
+    </LinearLayout>
+
+
+</LinearLayout>

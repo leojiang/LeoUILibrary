@@ -1,0 +1,27 @@
+<RelativeLayout
+    android:id="@+id/pull_to_refresh_head"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="#dceee8"
+    android:minHeight="30dp"
+    android:layout_height="30dp">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_11"
+        android:textColor="@color/color_bg_green_1"
+        android:text="更多......"/>
+</RelativeLayout>
