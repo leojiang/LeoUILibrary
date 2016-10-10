@@ -41,7 +41,7 @@ android {
 
             versionNameSuffix "-debug"
             minifyEnabled false
-            zipAlignEnabled false
+            zipAlignEnabled true
             shrinkResources false
 
             //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明
