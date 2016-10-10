@@ -17,7 +17,7 @@
 # class:
 
 #忽略警告
--ignorewarning
+-ignorewarnings
 
 #混淆时是否记录日志
 -verbose
