@@ -147,3 +147,8 @@
 -keep class com.example.blurtest.**{
     *;
 }
+
+-keep class com.example.blurtest.*$* {
+    public <fields>;
+    public <methods>;
+}
