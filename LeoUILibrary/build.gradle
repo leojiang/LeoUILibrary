@@ -40,8 +40,9 @@ android {
             buildConfigField "boolean", "LOG_DEBUG", "true"
 
             versionNameSuffix "-debug"
-            minifyEnabled false
-            zipAlignEnabled false
+            minifyEnabled true
+
+            //zipAlignEnabled false
             //shrinkResources true
 
             //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明
