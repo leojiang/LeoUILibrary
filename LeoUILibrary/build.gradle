@@ -40,7 +40,7 @@ android {
             buildConfigField "boolean", "LOG_DEBUG", "true"
 
             versionNameSuffix "-debug"
-            minifyEnabled true
+            minifyEnabled false
 
             //zipAlignEnabled false
             //shrinkResources true
