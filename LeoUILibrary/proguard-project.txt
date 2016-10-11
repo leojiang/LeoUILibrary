@@ -42,6 +42,11 @@
 # 混淆时所采用的算法
 -optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
 
+#如果引用了v4或者v7包
+-dontwarn android.support.**
+
+-dontwarn **
+
 -keepattributes SourceFile,LineNumberTable
 
 #保护注解
@@ -61,10 +66,29 @@
 #混淆前后的映射
 -printmapping mapping.txt
 
-#如果引用了v4或者v7包
--dontwarn android.support.**
+-keep class com.bumptech.gide.** {
+    *;
+}
 
--dontwarn
+-keep class com.nineoldandroids.** {
+    *;
+}
+
+-keep class com.squareup.okhttp.** {
+    *;
+}
+
+-keep class okio.** {
+    *;
+}
+
+-keep class com.squareup.picasso.** {
+    *;
+}
+
+-keep class com.nostra13.universalimageloader.** {
+    *;
+}
 
 -keep public class * extends android.app.Activity
 -keep public class * extends android.app.Application
