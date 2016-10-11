@@ -104,7 +104,6 @@
 -dontwarn okio.**
 -dontwarn com.squareup.picasso.**
 -dontwarn com.nostra13.universalimageloader.**
--dontwarn android.support.v4.app.**
 
 -keep public class * extends android.app.Activity
 -keep public class * extends android.app.Application
