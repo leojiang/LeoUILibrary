@@ -45,7 +45,7 @@
 #如果引用了v4或者v7包
 -dontwarn android.support.**
 
--dontwarn **
+#-dontwarn
 
 -keepattributes SourceFile,LineNumberTable
 
@@ -181,7 +181,7 @@
 
 #-libraryjars libs/*.jar
 
--keep class android.support.v4.app.** { *; }
+#-keep class android.support.v4.app.** { *; }
 
 -keep class com.example.blurtest.**{
     *;
