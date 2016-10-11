@@ -45,7 +45,7 @@ android {
             //shrinkResources true
 
             //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明
-            proguardFiles file('proguard-android.txt')
+            proguardFiles file('proguard-project.txt')
         }
 
         release {
@@ -59,7 +59,7 @@ android {
             // 移除无用的resource文件
             //shrinkResources true
             //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明
-            proguardFiles file('proguard-android.txt')
+            proguardFiles file('proguard-project.txt')
         }
     }
 
