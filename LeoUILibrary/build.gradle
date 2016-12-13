@@ -3,17 +3,33 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.0'
+        classpath 'com.android.tools.build:gradle:2.2.1'
     }
 }
 apply plugin: 'com.android.application'
 
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
 dependencies {
+    //for automatic test
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test:runner:0.4'
+    androidTestCompile 'com.android.support.test:rules:0.4'
+    androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
+
     compile 'com.android.support:multidex:1.0.1'
     compile fileTree(include: '*.jar', dir: 'libs')
     compile files('libs/universal-image-loader-1.9.0.jar')
     compile files('libs/picasso-2.5.2.jar')
     compile files('libs/glide-3.6.1.jar')
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.j256.ormlite:ormlite-android:4.48'
 }
 
 task wrapper(type: Wrapper) {
@@ -22,9 +38,10 @@ task wrapper(type: Wrapper) {
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "23.0.2"
+    buildToolsVersion '24.0.3'
 
     defaultConfig {
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         applicationId "com.lippi.recorder"
         minSdkVersion 19
         targetSdkVersion 21
